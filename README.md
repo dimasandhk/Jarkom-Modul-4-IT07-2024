@@ -103,6 +103,8 @@ Total alokasi IP ini diurutkan berdasarkan jumlah host terbesar hingga terkecil.
 
 ## Tree
 
+<img src="./img/hololive_tree.png" />
+
 ## Konfigurasi Subnetting
 
 ### **Subnet A1**
