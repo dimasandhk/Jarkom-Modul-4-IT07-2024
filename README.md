@@ -679,3 +679,206 @@ IP Address: 10.67.18.68
 Subnet Mask: 255.255.255.192
 Gateway: 10.67.18.65
 ```
+
+## Konfigurasi Routing
+
+### Sisi Kanan (Holo-ID)
+
+#### Hololive
+
+```
+enable
+configure terminal
+ip route 10.67.19.224 255.255.255.252 10.67.19.222
+ip route 10.67.8.0 255.255.252.0 10.67.19.222
+ip route 10.67.19.228 255.255.255.252 10.67.19.222
+ip route 10.67.18.64 255.255.255.192 10.67.19.222
+ip route 10.67.19.232 255.255.255.252 10.67.19.222
+ip route 10.67.14.0 255.255.254.0 10.67.19.222
+do write
+```
+
+#### Holo-ID
+
+```
+enable
+configure terminal
+ip route 0.0.0.0 0.0.0.0 10.67.19.221
+ip route 10.67.8.0 255.255.252.0 10.67.19.226
+ip route 10.67.18.64 255.255.255.192 10.67.19.230
+ip route 10.67.14.0 255.255.254.0 10.67.19.234
+do write
+```
+
+#### AREA15
+
+```
+enable
+configure terminal
+ip route 0.0.0.0 0.0.0.0 10.67.19.225
+do write
+```
+
+#### holoro
+
+```
+enable
+configure terminal
+ip route 0.0.0.0 0.0.0.0 10.67.19.229
+do write
+```
+
+#### holoh3ro
+
+```
+enable
+configure terminal
+ip route 0.0.0.0 0.0.0.0 10.67.19.233
+do write
+```
+
+### Sisi Bawah (Holo-JP)
+
+#### Hololive
+
+```
+enable
+configure terminal
+ip route 10.67.19.192 255.255.255.248 10.67.19.214
+ip route 10.67.19.160 255.255.255.240 10.67.19.214
+ip route 10.67.0.0 255.255.248.0 10.67.19.214
+ip route 10.67.12.0 255.255.254.0 10.67.19.214
+ip route 10.67.19.216 255.255.255.252 10.67.19.214
+ip route 10.67.19.0 255.255.255.128 10.67.19.214
+do write
+```
+
+#### Holo-JP
+
+```
+enable
+configure terminal
+ip route 0.0.0.0 0.0.0.0 10.67.19.213
+ip route 10.67.19.160 255.255.255.240 10.67.19.194
+ip route 10.67.0.0 255.255.248.0 10.67.19.195
+ip route 10.67.12.0 255.255.254.0 10.67.19.195
+ip route 10.67.19.216 255.255.255.252 10.67.19.195
+ip route 10.67.19.0 255.255.255.128 10.67.19.195
+do write
+```
+
+#### DEV_IS
+
+```
+enable
+configure terminal
+ip route 0.0.0.0 0.0.0.0 10.67.19.193
+ip route 10.67.0.0 255.255.248.0 10.67.19.195
+ip route 10.67.12.0 255.255.254.0 10.67.19.195
+ip route 10.67.19.216 255.255.255.252 10.67.19.195
+ip route 10.67.19.0 255.255.255.128 10.67.19.195
+do write
+```
+
+#### GEN:0
+
+```
+enable
+configure terminal
+ip route 0.0.0.0 0.0.0.0 10.67.19.193
+ip route 10.67.19.160 255.255.255.240 10.67.19.194
+ip route 10.67.12.0 255.255.254.0 10.67.0.4
+ip route 10.67.19.216 255.255.255.252 10.67.0.4
+ip route 10.67.19.0 255.255.255.128 10.67.0.4
+do write
+```
+
+#### GEN:1
+
+```
+enable
+configure terminal
+ip route 0.0.0.0 0.0.0.0 10.67.0.1
+ip route 10.67.19.0 255.255.255.128 10.67.19.218
+do write
+```
+
+#### GAMERS
+
+```
+enable
+configure terminal
+ip route 0.0.0.0 0.0.0.0 10.67.19.217
+do write
+```
+
+### Sisi Kiri (Holo-EN)
+
+#### Hololive
+
+```
+enable
+configure terminal
+ip route 10.67.1.4 255.255.255.252 10.67.19.202
+ip route 10.67.1.80 255.255.255.224 10.67.19.202
+ip route 10.67.1.8 255.255.255.252 10.67.19.202
+ip route 10.67.1.76 255.255.254.0 10.67.19.202
+ip route 10.67.1.12 255.255.255.248 10.67.19.202
+ip route 10.67.1.20 255.255.255.248 10.67.19.202
+ip route 10.67.1.112 255.255.255.192 10.67.19.202
+do write
+```
+
+#### Holo-EN
+
+```
+enable
+configure terminal
+ip route 0.0.0.0 0.0.0.0 10.67.19.201
+ip route 10.67.1.80 255.255.255.224 10.67.19.206
+ip route 10.67.1.76 255.255.254.0 10.67.19.210
+ip route 10.67.1.12 255.255.255.248 10.67.19.210
+ip route 10.67.1.20 255.255.255.248 10.67.19.210
+ip route 10.67.1.112 255.255.255.192 10.67.19.210
+do write
+```
+
+#### HoloAdvent
+
+```
+enable
+configure terminal
+ip route 0.0.0.0 0.0.0.0 10.67.19.205
+do write
+```
+
+#### Holo-Myth
+
+```
+enable
+configure terminal
+ip route 0.0.0.0 0.0.0.0 10.67.19.209
+ip route 10.67.1.20 255.255.255.248 10.67.19.179
+ip route 10.67.1.112 255.255.255.192 10.67.19.178
+do write
+```
+
+#### Router4
+
+```
+enable
+configure terminal
+ip route 0.0.0.0 0.0.0.0 10.67.19.177
+ip route 10.67.1.112 255.255.255.192 10.67.19.178
+do write
+```
+
+#### Holo-Council
+
+```
+enable
+configure terminal
+ip route 0.0.0.0 0.0.0.0 10.67.19.177
+ip route 10.67.1.20 255.255.255.248 10.67.19.179
+do write
+```
