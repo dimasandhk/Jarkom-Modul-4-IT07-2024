@@ -884,3 +884,9 @@ ip route 0.0.0.0 0.0.0.0 10.67.19.177
 ip route 10.67.1.20 255.255.255.248 10.67.19.179
 do write
 ```
+
+## Test Ping
+
+subnetting
+<img src="./img/ping-subnet-router.png" />
+<img src="./img/ping-subnet-client.png" />
