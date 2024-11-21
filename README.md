@@ -41,7 +41,7 @@
 
 ### Tree VLSM
 
-<img src="./img/VLSM_tree.png" />
+<img src="./img/VLSM_Tree_IT07.png" />
 
 ### Pembagian IP
 
@@ -924,4 +924,17 @@ do write
 
 ### Testing
 
-Testing dilakukan dengan send packet antara 3 ujung dari topologi (Holo-ID, Holo-JP, dan Holo-EN)
+testing dilakukan random dari 3 ujung topologi (sisi bawah, kanan, dan kiri) yaitu router (Holo-ID, Holo-JP, Holo-EN)
+
+#### Router ke Router (testing routing)
+
+<img src="./img/pingr2r-vlsm.png" />
+
+#### Client ke Client (testing routing)
+
+<img src="./img/pingc2c-vlsm.png" />
+
+#### Testing Subnetting
+
+<img src="./img/ping-subnet-client.png" />
+<img src="./img/ping-subnet-router.png" />
